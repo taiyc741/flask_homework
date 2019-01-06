@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}首页{% endblock %}
+{% block body %}
+  <h1 style="text-align: center">欢迎使用本工具</h1>
+  <div>
+    <br>
+    <h2 style="text-align: center"><a href="{{ url_for("search_product") }}">功能1:电子产品信息查询</a></h2>
+    <br>
+    <h2 style="text-align: center"><a href="{{ url_for("chat") }}">功能2:腾讯智能闲聊问答</a></h2>
+  </div>
+{% endblock %}

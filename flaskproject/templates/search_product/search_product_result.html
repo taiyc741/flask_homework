@@ -1,0 +1,18 @@
+{% extends "search_product/search_product.html" %}
+{% block title %}
+  结果页
+{% endblock %}
+{% block body %}
+  {{ super() }}
+  {% for product in products %}
+    <div align="center">
+        <img src="{{ product[0] }}">
+        <p>
+          {{ product[1] }}参考价:{{ product[-1] }}
+        </p>
+        <p>
+          {{ product[2] }}
+        </p>
+      </div>
+  {% endfor %}
+{% endblock %}

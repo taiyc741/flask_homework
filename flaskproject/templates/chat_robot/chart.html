@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}
+  智能闲聊
+{% endblock %}
+{% block body %}
+  <br>
+  <br>
+  <p align="center">简介：这是一个叫小呆呆的聊天机器人，可以问各种简单的问题如某地天气</p>
+   <form  action="{{ url_for("chat_result") }}"  method="post">
+     <div align="center">
+       <input type="text" name="question" placeholder="请输入您的问题">
+      <button type="submit">提问</button>
+     </div>
+   </form>
+  <br>
+  <br>
+{% endblock %}

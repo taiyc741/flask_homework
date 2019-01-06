@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}产品搜索页{% endblock %}
+{% block body %}
+  <br>
+  <br>
+  <p align="center">简介：这是一个搜索中关村电子商品的工具</p>
+  <br>
+   <form  action="{{ url_for("search_product_result") }}"  method="post" role="search">
+     <div align="center">
+       <input type="text" name="product_name" placeholder="请输入您要查询的商品(苹果x)">
+      <button type="submit">查询</button>
+     </div>
+   </form>
+  <br>
+  <br>
+{% endblock %}

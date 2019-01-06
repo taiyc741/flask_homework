@@ -1,0 +1,14 @@
+{% extends "chat_robot/chart.html" %}
+{% block title %}
+  闲聊会话中
+{% endblock %}
+{% block body %}
+  {{ super() }}
+      {% for line in result_chat %}
+        {% if loop.index%2 != 0 %}
+          <p align="center">问：{{ line }}</p>
+        {% else %}
+          <p align="center">小呆呆答：{{ line }}</p>
+        {% endif %}
+      {% endfor %}
+{% endblock %}
